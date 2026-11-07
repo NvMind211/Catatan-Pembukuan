@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catatan Keuangan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Catatan Keuangan Taka</h1>
+
+<div class="kartu" id="areaLogin">
+    <h2>Masuk</h2>
+    <label>Email</label>
+    <input type="email" id="email">
+    <label>Password</label>
+    <input type="password" id="password">
+    <button id="tombolMasuk">Masuk</button>
+</div>
+
+<div id="areaApp" class="hidden">
+<div class="kartu">
+  <h2>Tambah Catatan</h2>
+
+  <label>Tanggal</label>
+  <input type="date" id="tanggal">
+
+  <label>Jenis</label>
+  <select id="jenis">
+    <option value="pemasukan">Pemasukan</option>
+    <option value="pengeluaran">Pengeluaran</option>
+  </select>
+
+  <label>Metode</label>
+  <select id="metode">
+    <option value="cash">Cash</option>
+    <option value="bank">Bank</option>
+    <option value="gopay">Gopay</option>
+    <option value="dana">Dana</option>
+    <option value="shopeepay">ShopeePay</option>
+    <option value="flazz">Flazz</option>
+  </select>
+
+  <label>Kode</label>
+  <select id="kode">
+    <option value="k01">K01</option>
+    <option value="k02">K02</option>
+    <option value="k03">K03</option>
+    <option value="k04">K04</option>
+    <option value="k05">K05</option>
+    <option value="k06">K06</option>
+  </select>
+  
+  <label>Keterangan</label>
+  <input type="text" id="keterangan" placeholder="Contoh: Makan, Gaji">
+
+  <label>Jumlah (Rp)</label>
+  <input type="number" id="jumlah" placeholder="Contoh: 25000">
+
+  <button id="tombolSimpan">Simpan</button>
+</div>
+
+<div class="kartu" style="margin-top: 20px;">
+  <h2>Ringkasan</h2>
+  <p>Total Pemasukan: <b id="totalMasuk">Rp 0</b></p>
+  <p>Total Pengeluaran: <b id="totalKeluar">Rp 0</b></p>
+  <p>Saldo: <b id="saldo">Rp 0</b></p>
+</div>
+
+<div class="kartu" style="margin-top: 20px;">
+    <h2>Daftar Catatan</h2>
+    <ul id="daftar"></ul>
+</div>
+  <div class="kartu" style="margin-top: 20px;">
+    <button id="tombolKeluar" class="abu">Keluar</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
